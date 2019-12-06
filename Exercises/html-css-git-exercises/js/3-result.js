@@ -61,6 +61,7 @@
   if (timeEls.length) {
     let result = true;
     timeEls.forEach(function(el, index) {
+      debugger;
       if (
         el.tagName !== "TIME" ||
         !el.hasAttribute("dateTime") ||
