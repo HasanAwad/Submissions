@@ -5,7 +5,7 @@
 ---
 
 Jamous Street hasan-awad@hotmail.com
-Baabda @twitter_handle
+Baabda
 Lebanon +96176941170
 
 ---
