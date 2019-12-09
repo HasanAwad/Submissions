@@ -15,8 +15,10 @@ Lebanon +96176941170
 
 2015-2016
 : **TS2, System & Network**; Institute Bir Hassan (Beirut)
+  
+Experience
 
-## Experience
+---
 
 - IT Technical Support in TerraNet (Present)
   www.terra.net.lb
@@ -35,14 +37,11 @@ more available on TMDb.
 
 Programming Languages
 : **Java:**
-
 : **Python:**
-
 : **Java Applet:**
-
 : **VB:**
 
-: Basic knowledge of **C#**, **x86 assembly**, **bash**
+    :   Basic knowledge of **C#**, **x86 assembly**, **bash**
 
 ## Languages
 
