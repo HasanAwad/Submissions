@@ -1,0 +1,77 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(39, 59, 63);
+  line-height: 25px;
+}
+
+main {
+  margin: 0 auto;
+  display: grid;
+  width: 85%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "menu gallery gallery"
+    "_block sub other"
+    ". footer .";
+  grid-template-rows: minmax(50px, auto);
+  color: rgb(177, 208, 213);
+  grid-gap: 20px;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-evenly;
+  background: rgb(29, 39, 41);
+  padding: 10px;
+}
+
+nav > div:not(#last) {
+  padding-right: 5%;
+  border-right: 1px solid rgb(177, 208, 213);
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.gallery {
+  grid-area: gallery;
+}
+.subscription {
+  grid-area: sub;
+  border-right: 1px solid rgb(177, 208, 213);
+  padding-right: 15px;
+}
+.otherservices {
+  grid-area: other;
+}
+
+.block {
+  grid-area: _block;
+}
+
+header {
+  grid-area: header;
+  background: url(https://image.shutterstock.com/image-photo/grey-donkey-on-green-background-260nw-1174117981.jpg)
+    no-repeat;
+  padding: 20px;
+  margin-top: 15px;
+  background-size: cover;
+}
+
+footer {
+  grid-area: footer;
+}
+
+button {
+  padding: 10px;
+  margin: 10px 0;
+}
