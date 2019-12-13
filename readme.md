@@ -56,8 +56,16 @@ To keep working on the latest Submission folders you need to do the followings:
 
 ### Setup ( done once whenever you do a new clone )
 
+<<<<<<< HEAD
+
 `git remote add upstream git@github.com:coditech/Submissions.git`
 
 ### Updating ( Recurring step )
 
-`git pull upstream master`
+=======
+`git remote add upstream git@github.com:coditech/Submissions.git`
+
+### Updating ( Recurring step )
+
+> > > > > > > upstream/master
+> > > > > > > `git pull upstream master`
