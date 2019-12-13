@@ -159,3 +159,45 @@ h3::before {
   padding-top: 1em;
   padding-left: 2.5em;
 }
+
+@media (max-width: 600px) {
+  header div {
+    grid-area: header-div;
+  }
+  #about {
+    grid-area: about;
+  }
+
+  #competencies {
+    grid-area: competencies;
+  }
+
+  #experience {
+    grid-area: experience;
+  }
+
+  #education {
+    grid-area: education;
+  }
+
+  #hobbies {
+    grid-area: hobbies;
+  }
+
+  #contact {
+    grid-area: contact;
+  }
+  body div {
+    grid-template-areas:
+      "header-div"
+      "about"
+      "competencies"
+      "experience"
+      "education"
+      "hobbies"
+      "contact";
+  }
+  #contact {
+    position: inherit;
+  }
+}
