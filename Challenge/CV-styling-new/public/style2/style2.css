@@ -1,0 +1,57 @@
+header hgroup h1 {
+  border-bottom: 1px grey solid;
+}
+
+.content {
+  padding: 2em 10em;
+}
+
+header {
+  padding: 2em 1em 0 6em;
+}
+.content section h3 {
+  border-right: 1px grey solid;
+}
+figure img {
+  position: absolute;
+  top: 3em;
+  left: 80%;
+  transform: rotate(-15deg);
+}
+div hgroup h2 {
+  display: none;
+}
+#about h3 {
+  display: none;
+}
+
+.competencies h2 {
+  float: left;
+}
+.skills {
+  float: right;
+}
+
+.competencies {
+  display: grid;
+}
+
+.contact-email {
+  background-image: url("Challenge/CV-styling-new/public/images/email.png")
+    no-repeat;
+
+  height: 51px;
+  width: 92px;
+}
+
+.contact-email dt {
+  display: none;
+}
+.contact-email dd {
+  display: none;
+}
+.experiences {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr;
+}
