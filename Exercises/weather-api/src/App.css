@@ -1,6 +1,10 @@
-app {
-  height: 100vh;
+.app{
+  height: 100%;
+  width: 100%;
   font-family: "Raleway";
+}
+body{
+  background-color: #9ccef4;
 }
 
 .app__navbar{
