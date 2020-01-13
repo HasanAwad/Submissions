@@ -10,7 +10,6 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-<<<<<<< HEAD
         <navbar className = "app__navbar">
             <input className="app__navbar__input" type="text" placeholder="Type in a city name"/>
             <button className="app__navbar__button">Find Weather</button>
@@ -63,10 +62,6 @@ class App extends Component {
             </div>
           </div>
         </main>
-=======
-        <header className="app__header">Hasan</header>
-        <main className="app__main"></main>
->>>>>>> fce344d1124cac652bd1e8077661fea796378b69
       </div>
     );
   }
