@@ -1,69 +1,70 @@
-.app{
+.app {
   height: 100%;
   width: 100%;
   font-family: "Raleway";
 }
-body{
+body {
   background-color: #9ccef4;
 }
 
-.app__navbar{
-  background-color:#759EDA;
-  display:flex;
+.app__navbar {
+  background-color: #759eda;
+  display: flex;
   flex-wrap: wrap;
-  padding:1em;
+  padding: 1em;
 }
 
-.app__navbar__input{
-  background-color:#759EDA;
-  color:#fff;
+.app__navbar__input {
+  background-color: #759eda;
+  color: #fff;
   padding: 0.5em 1em;
-  border:none;
+  border: none;
+  outline: none;
 }
 
-.app__navbar__button{
-  background-color:#5879c7;
+.app__navbar__button {
+  background-color: #5879c7;
   padding: 0.5em 1em;
-  border:none;
-  color:#000;
+  border: none;
+  color: #000;
 }
 
 .app__main {
-  background-color: #9CCEF4;
+  background-color: #9ccef4;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.app__main__weather{
-  padding:2em;
-  display:flex;
+.app__main__weather {
+  padding: 2em;
+  display: flex;
   flex-direction: column;
-  text-align:center;
+  text-align: center;
 }
-.app__main__weather__description{
-  color:#fff;
+.app__main__weather__description {
+  color: #fff;
 }
-.app__main__weather div{
+.app__main__weather div {
   margin: 5px;
 }
 
-.app__main__weather__details{
-  display:flex;
-  flex-wrap:wrap;
+.app__main__weather__details {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
-.app__main__weather__details div{
+.app__main__weather__details div {
   margin: auto 0.5em;
 }
 
-.app__main__weather-list{
-  display:flex;
+.app__main__weather-list {
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.app__main__weather-list__weather-element{
+.app__main__weather-list__weather-element {
   text-align: center;
-  margin: 1em ;
+  margin: 1em;
 }
