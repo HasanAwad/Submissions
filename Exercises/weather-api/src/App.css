@@ -67,4 +67,5 @@ body {
 .app__main__weather-list__weather-element {
   text-align: center;
   margin: 1em;
+  width: 5em;
 }

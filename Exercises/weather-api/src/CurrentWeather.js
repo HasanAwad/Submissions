@@ -14,11 +14,12 @@ class CurrentWeather extends Component {
           {this.props.discription}
         </div>
         <div className="app__main__weather__Temperature">
-          <b>Temperature</b> {this.props.temperature}
+          <b>Temperature</b> {this.props.temperatureMin} to{" "}
+          {this.props.temperatureMax}°C
         </div>
         <div className="app__main__weather__details">
           <div className="app__main__weather__details__Humidity">
-            <b>Humidity</b> {this.props.humidity}
+            <b>Humidity</b> {this.props.humidity}%
           </div>
           <div className="app__main__weather__details__Pressure">
             <b>Pressure</b> {this.props.pressure}
