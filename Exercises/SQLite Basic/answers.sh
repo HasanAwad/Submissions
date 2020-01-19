@@ -183,5 +183,58 @@ M
 10000
 
 
+Creating Table
+
+
+CREATE TABLE "graduates" (
+	"ID"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	"Name"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER,
+	"Gender"	TEXT,
+	"Points"	INTEGER,
+	"Graduation"	TEXT
+);
+
+1: INSERT INTO graduates (ID, Name, Age, Gender, Points) SELECT ID, Name, Age, Gender, Points FROM students WHERE Name = "Layal"
+
+2: UPDATE graduates SET Graduation = "08/09/2018" WHERE Name = "Layal"
+
+3: DELETE FROM students WHERE Name = "Layal"
+
+Joins
+
+1: SELECT employees.Name, employees.Company, companies.Date
+	FROM employees
+	INNER JOIN companies ON employees.Company=companies.Name
+
+OutPut:
+
+Marc	Google		1998
+Maria	Google		1998
+Alaa	Facebook	2004
+Hala	Snapchat	2011
+
+2: SELECT employees.Name
+  FROM employees
+  INNER JOIN companies ON employees.Company=companies.Name
+  WHERE companies.Date<2000
+
+OutPut:
+
+  Marc
+  Maria
+
+3: SELECT companies.Name
+FROM companies
+INNER JOIN employees ON employees.Company=companies.Name
+WHERE employees.Role='Graphic Designer';
+
+OutPut:
+
+Snapchat
+
+
+
+
 
 
