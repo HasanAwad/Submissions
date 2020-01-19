@@ -183,6 +183,9 @@ M
 10000
 
 
+------------------------------------------------------------------
+
+
 Creating Table
 
 
@@ -200,6 +203,8 @@ CREATE TABLE "graduates" (
 2: UPDATE graduates SET Graduation = "08/09/2018" WHERE Name = "Layal"
 
 3: DELETE FROM students WHERE Name = "Layal"
+
+------------------------------------------------------------------
 
 Joins
 
@@ -233,7 +238,44 @@ OutPut:
 
 Snapchat
 
+------------------------------------------------------------------
 
+COUNT & FILTER
+
+1: SELECT Name FROM students WHERE Points=(SELECT max(Points) FROM students)
+
+OutPut:
+
+Robert
+Jana
+New Guy
+
+2: SELECT avg(Points) FROM students 
+
+OutPut:
+358.333333333333
+
+3: SELECT count() FROM students WHERE Points = 500
+
+Output:
+3
+
+4:SELECT Name FROM students WHERE Name like '%s%'
+
+Output:
+Basma
+Hasan
+
+5: SELECT Name FROM students ORDER BY Points DESC
+
+OutPut:
+
+Robert
+Jana
+New Guy
+Basma
+Alex
+Hasan
 
 
 
