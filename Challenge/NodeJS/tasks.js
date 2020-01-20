@@ -79,7 +79,7 @@ function hello(name) {
 function help() {
   console.log("commands:");
   console.log(
-    "1# hello: say hello \n2# help: shaw all commands \n3# quit or exit: exit the application "
+    "1# hello: say hello! \n2# hello name: say hello name! \n3# help: shaw all commands  \n4# quit or exit: exit the application"
   );
 }
 
