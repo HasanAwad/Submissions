@@ -42,7 +42,7 @@ function onDataReceived(text) {
     if (finalText.length > 1) {
       hello(finalText[1]);
     } else {
-      hello(false);
+      console.log(finalText[0] + "!");
     }
   } else if (text === "help\n") {
     help();
@@ -68,11 +68,7 @@ function unknownCommand(c) {
  * @returns {void}
  */
 function hello(name) {
-  if (name != false) {
-    console.log("hello " + name + "!");
-  } else {
-    console.log("hello!");
-  }
+  console.log("hello " + name + "!");
 }
 /**
  * lists all the possible commands
