@@ -36,6 +36,8 @@ function onDataReceived(text) {
     quit();
   } else if (text === "hello\n") {
     hello();
+  } else if (text === "help\n") {
+    help();
   } else {
     unknownCommand(text);
   }
@@ -59,6 +61,18 @@ function unknownCommand(c) {
  */
 function hello() {
   console.log("hello!");
+}
+/**
+ * lists all the possible commands
+ *
+ * @returns {void}
+ */
+
+function help() {
+  console.log("commands:");
+  console.log(
+    "1# hello: say hello \n2# help: shaw all commands \n3# quit or exit: exit the application "
+  );
 }
 
 /**
