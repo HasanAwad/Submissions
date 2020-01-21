@@ -56,6 +56,12 @@ function onDataReceived(text) {
     } else {
       console.log("ERROR");
     }
+  } else if (finalText[0] === "remove") {
+    if (finalText.length > 1) {
+      remove(finalText[1]);
+    } else {
+      remove(false);
+    }
   } else {
     unknownCommand(text);
   }
@@ -70,6 +76,15 @@ function onDataReceived(text) {
  */
 function unknownCommand(c) {
   console.log('unknown command: "' + c.trim() + '"');
+}
+
+function remove(number) {
+  if (number == false) {
+    listCommands.splice(listCommands.length--, 1);
+    console.log("you are here");
+  } else {
+    listCommands.splice(number - 1, 1);
+  }
 }
 
 function add(secondPart) {
