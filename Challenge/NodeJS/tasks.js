@@ -32,7 +32,7 @@ function startApp(name) {
  * @returns {void}
  */
 
-let listCommands = ["task1", "task2", "task3"];
+let listCommands = [];
 function onDataReceived(text) {
   let finalText = text
     .trim()
@@ -49,7 +49,13 @@ function onDataReceived(text) {
   } else if (text === "help\n") {
     help();
   } else if (text === "list\n") {
-    list();
+    list(listCommands);
+  } else if (finalText[0] === "add") {
+    if (finalText.length > 1) {
+      add(finalText.slice(1, finalText.length).join(" "));
+    } else {
+      console.log("ERROR");
+    }
   } else {
     unknownCommand(text);
   }
@@ -64,6 +70,10 @@ function onDataReceived(text) {
  */
 function unknownCommand(c) {
   console.log('unknown command: "' + c.trim() + '"');
+}
+
+function add(secondPart) {
+  listCommands.push(secondPart);
 }
 
 /**
@@ -87,9 +97,10 @@ function help() {
   );
 }
 
-function list() {
-  for (let i = 0; i < listCommands.length; i++) {
-    console.log(i + " " + listCommands[i]);
+function list(listArray) {
+  let j = 1;
+  for (let i = 0; i < listArray.length; i++) {
+    console.log(j++ + " " + listArray[i]);
   }
 }
 
