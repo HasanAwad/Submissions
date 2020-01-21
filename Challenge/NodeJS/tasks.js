@@ -62,6 +62,12 @@ function onDataReceived(text) {
     } else {
       remove(false);
     }
+  } else if (finalText[0] === "edit") {
+    if (finalText.length > 1) {
+      edit(finalText[1]);
+    } else {
+      edit(false);
+    }
   } else {
     unknownCommand(text);
   }
@@ -76,6 +82,10 @@ function onDataReceived(text) {
  */
 function unknownCommand(c) {
   console.log('unknown command: "' + c.trim() + '"');
+}
+
+function edit(taskNumber) {
+  listCommands[listCommands.length - 1] = taskNumber;
 }
 
 function remove(number) {
