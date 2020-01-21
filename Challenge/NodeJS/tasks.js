@@ -31,6 +31,8 @@ function startApp(name) {
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+
+let listCommands = ["task1", "task2", "task3"];
 function onDataReceived(text) {
   let finalText = text
     .trim()
@@ -46,6 +48,8 @@ function onDataReceived(text) {
     }
   } else if (text === "help\n") {
     help();
+  } else if (text === "list\n") {
+    list();
   } else {
     unknownCommand(text);
   }
@@ -81,6 +85,12 @@ function help() {
   console.log(
     "1# hello: say hello! \n2# hello name: say hello name! \n3# help: shaw all commands  \n4# quit or exit: exit the application"
   );
+}
+
+function list() {
+  for (let i = 0; i < listCommands.length; i++) {
+    console.log(i + " " + listCommands[i]);
+  }
 }
 
 /**
