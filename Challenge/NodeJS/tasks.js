@@ -139,7 +139,7 @@ function help() {
 function list(listArray) {
   let j = 1;
   for (let i = 0; i < listArray.length; i++) {
-    console.log(j++ + " " + listArray[i]);
+    console.log(j++ + "-" + [] + listArray[i]);
   }
 }
 
