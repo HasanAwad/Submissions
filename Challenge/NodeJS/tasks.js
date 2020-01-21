@@ -108,7 +108,7 @@ function hello(name) {
 function help() {
   console.log("commands:");
   console.log(
-    "1# hello: say hello! \n2# hello name: say hello name! \n3# help: shaw all commands  \n4# quit or exit: exit the application"
+    "1# hello: say hello! \n2# hello name: say hello name! \n3# list: show your tasks list \n4# add task: add task to list \n5# remove: remove last task from list \n6# remove x: remove task number x \n7# help: shaw all commands  \n8# quit or exit: exit the application"
   );
 }
 
