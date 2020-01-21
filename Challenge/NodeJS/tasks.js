@@ -79,11 +79,15 @@ function unknownCommand(c) {
 }
 
 function remove(number) {
-  if (number == false) {
-    listCommands.splice(listCommands.length--, 1);
-    console.log("you are here");
+  if (number > listCommands.length || number < 1) {
+    console.log("number does not exist");
   } else {
-    listCommands.splice(number - 1, 1);
+    if (number == false) {
+      listCommands.splice(listCommands.length--, 1);
+      console.log("you are here");
+    } else {
+      listCommands.splice(number - 1, 1);
+    }
   }
 }
 
