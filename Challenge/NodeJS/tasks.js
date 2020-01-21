@@ -64,9 +64,13 @@ function onDataReceived(text) {
     }
   } else if (finalText[0] === "edit") {
     if (finalText.length > 1) {
-      edit(finalText[1]);
+      if (parseInt(finalText[1])) {
+        edit(finalText[1], finalText.slice(2).join(" "));
+      } else {
+        edit(0, finalText[1]);
+      }
     } else {
-      edit(false);
+      console.log("error");
     }
   } else {
     unknownCommand(text);
@@ -84,8 +88,14 @@ function unknownCommand(c) {
   console.log('unknown command: "' + c.trim() + '"');
 }
 
-function edit(taskNumber) {
-  listCommands[listCommands.length - 1] = taskNumber;
+function edit(taskNumber, text) {
+  if (taskNumber > listCommands.length || taskNumber < 1) {
+    console.log("The number of the task you entered does not exist");
+  } else if (taskNumber === 0) {
+    listCommands[listCommands.length - 1] = taskNumber;
+  } else {
+    listCommands[taskNumber - 1] = text;
+  }
 }
 
 function remove(number) {
