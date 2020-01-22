@@ -16,6 +16,14 @@ function startApp(name) {
   console.log("--------------------");
 }
 
+function get_Database_Name() {
+  let args = process.argv.slice(2);
+  if (args == "") {
+    return "database.json";
+  } else {
+    return args.toString();
+  }
+}
 /**
  * Decides what to do depending on the data that was received
  * This function receives the input sent by the user.
@@ -32,12 +40,14 @@ function startApp(name) {
  * @returns {void}
  */
 
-let listCommands = [];
+let listCommands = readFile();
 function onDataReceived(text) {
+  //listCommands = readFile()
   let finalText = text
     .trim()
     .replace("\n", "")
     .split(" ");
+
   if (text === "quit\n" || text === "exit\n") {
     quit();
   } else if (finalText[0] === "hello") {
@@ -72,6 +82,10 @@ function onDataReceived(text) {
     } else {
       console.log("error");
     }
+  } else if (finalText[0] === "check") {
+    check(finalText[1]);
+  } else if (finalText[0] === "uncheck") {
+    uncheck(finalText[1]);
   } else {
     unknownCommand(text);
   }
@@ -92,9 +106,9 @@ function edit(taskNumber, text) {
   if (taskNumber > listCommands.length || taskNumber < 1) {
     console.log("The number of the task you entered does not exist");
   } else if (taskNumber === 0) {
-    listCommands[listCommands.length - 1] = taskNumber;
+    listCommands[listCommands.length - 1].tasks = text;
   } else {
-    listCommands[taskNumber - 1] = text;
+    listCommands[taskNumber - 1].tasks = text;
   }
 }
 
@@ -112,7 +126,15 @@ function remove(number) {
 }
 
 function add(secondPart) {
-  listCommands.push(secondPart);
+  //listCommands.push(secondPart);
+
+  let objects_tasks = {
+    tasks: secondPart,
+    check: false
+  };
+  listCommands.push(objects_tasks);
+
+  //writeToFile()
 }
 
 /**
@@ -138,9 +160,56 @@ function help() {
 
 function list(listArray) {
   let j = 1;
-  for (let i = 0; i < listArray.length; i++) {
-    console.log(j++ + "-" + [] + listArray[i]);
+
+  for (let i = 0; i < listCommands.length; i++) {
+    let check_value = "";
+    if (listCommands[i].check) {
+      check_value = "✓";
+    } else {
+      check_value = "x";
+    }
+    console.log(j++ + "-" + `[${check_value}]` + listCommands[i].tasks);
   }
+}
+
+function check(taskNumber) {
+  if (parseInt(taskNumber) <= listCommands.length) {
+    listCommands[taskNumber - 1].check = true;
+  } else {
+    console.log("Error");
+  }
+}
+
+function uncheck(taskNumber) {
+  if (parseInt(taskNumber) <= listCommands.length) {
+    listCommands[taskNumber - 1].check = false;
+  } else {
+    console.log("Error");
+  }
+}
+
+function readFile() {
+  "use strict";
+
+  var fs = require("fs");
+  var obj = JSON.parse(fs.readFileSync("database.json", "utf8"));
+
+  return obj;
+}
+
+function writeToFile(commadns_list) {
+  "use strict";
+
+  console.log("Starting writeToFile");
+
+  const fs = require("fs");
+
+  let data = JSON.stringify(commadns_list, null, 2);
+
+  fs.writeFileSync("database.json", data, err => {
+    if (err) throw err;
+    console.log("Done with writeToFile... Returning true");
+  });
 }
 
 /**
@@ -149,7 +218,8 @@ function list(listArray) {
  * @returns {void}
  */
 function quit() {
-  console.log("Quitting now, goodbye!");
+  console.log("Quiting now... Bye");
+  writeToFile(listCommands);
   process.exit();
 }
 
