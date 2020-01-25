@@ -99,9 +99,35 @@ app.get("/movies/get/id/:ID", (req, res) => {
   }
 });
 
-app.get("/movies/edit", (req, res) =>
-  res.send({ status: 200, message: `Hello` })
-);
+app.get("/movies/edit/:ID", (req, res) => {
+  if (req.params.ID < movies.length && req.params.ID >= 0) {
+    let id = req.params.ID;
+
+    req.query.title == "" || req.query.rating == undefined
+      ? (movies[id].title = movies[id].title)
+      : (movies[id].title = req.query.title);
+
+    req.query.year == "" ||
+      req.query.year == undefined ||
+      isNaN(req.query.year);
+    req.query.year.length < 4
+      ? (movies[id].year = movies[id].year)
+      : (movies[id].year = parseInt(req.query.year));
+
+    req.query.rating == "" || req.query.rating == undefined
+      ? (movies[id].rating = movies[id].rating)
+      : (movies[id].rating = parseInt(req.query.rating));
+
+    res.send({ status: 200, data: movies });
+  } else {
+    res.send({
+      status: 404,
+      error: true,
+      message: `the movie  ${req.query.ID} does not exist`
+    });
+  }
+});
+
 app.get("/movies/delete/:ID", (req, res) => {
   if (req.params.ID < movies.length && req.params.ID >= 0) {
     let id = req.params.ID;
