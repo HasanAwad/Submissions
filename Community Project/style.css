@@ -1,0 +1,91 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: navajowhite;
+}
+header {
+  background-color: #333;
+  width: 100%;
+  height: 100px;
+}
+header .brand_title {
+  font-size: 24px;
+  color: white;
+  font-weight: 900;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+header nav div ul {
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+  top: 0;
+}
+header nav div ul li {
+  display: inline-block;
+  float: left;
+  list-style: none;
+  padding: 0 20px;
+}
+header nav div ul li a {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.banner {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url("images/foundation_upper-tile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.adopt {
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 8px#111;
+  font-weight: 900;
+  margin: 0%;
+}
+.banner h1 {
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 8px#111;
+  font-weight: 900;
+}
+
+.boxes div {
+  margin: 20px 20px 0;
+  width: calc(100% - 32px);
+  height: auto;
+}
+.boxes {
+  margin: 10px 70px;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.section_images {
+  align-items: center;
+  justify-content: center;
+  background-size: 500px;
+  width: 500px;
+  height: 550px;
+  text-align: justify;
+  border-radius: 15px;
+  margin-top: 20px;
+}

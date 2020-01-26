@@ -1,5 +1,8 @@
 const express = require("express");
+var bodyParser = require("body-parser");
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 const port = 3000;
 let date = new Date();
 const movies = [
@@ -35,7 +38,7 @@ app.get("/search", (req, res) => {
   res.send({ status: 200, message: "ok", data: req.query.s });
 });
 
-app.get("/movies/add", (req, res) => {
+app.post("/movies/add", (req, res) => {
   if (
     req.query.title == "" ||
     req.query.year == "" ||

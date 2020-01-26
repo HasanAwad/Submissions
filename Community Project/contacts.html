@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a class="brand_title" href="index.html"><Datag>DOGGO</Datag></a>
+        <div>
+          <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news_events">News and Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contact-form">
+        <fieldset>
+          <legend>Please enter information accurately</legend>
+          <p class="note">Fields containing <span>*</span> are required</p>
+          <div class="grids">
+            <label class="bold-lable" for="name"
+              >Your Name <span>*</span></label
+            >
+            <input type="text" id="name" required /> <br />
+
+            <label class="bold-lable" for="email"
+              >Your Email <span>*</span></label
+            >
+            <input type="email" id="email" required /> <br />
+
+            <label class="bold-lable" for="location"
+              >Location <span>*</span></label
+            >
+            <input type="text" id="location" required /> <br />
+          </div>
+
+          <label class="bold-lable" for="more-info">More Information</label>
+          <br />
+          <textarea
+            type="text"
+            id="more-info"
+            placeholder="add more info"
+          ></textarea>
+          <br />
+        </fieldset>
+        <button type="submit" id="sub-button">Adopt</button>
+      </div>
+    </main>
+  </body>
+</html>
