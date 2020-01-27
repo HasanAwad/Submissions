@@ -1,19 +1,35 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title></title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Cabin+Condensed|Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>DOGGO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
+    <script>
+      $(function() {
+        $(".scroll-down").click(function() {
+          $("html, body").animate(
+            { scrollTop: $("section.boxes").offset().top },
+            "slow"
+          );
+          return false;
+        });
+      });
+    </script>
+
     <header>
       <nav>
         <a class="brand_title" href="index.html"><Datag>DOGGO</Datag></a>
         <div>
           <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news_events">News and Events</a></li>
-            <li><a href="#contacts.html">Contact</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="events.html">News and Events</a></li>
+            <li><a href="contacts.html">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -21,26 +37,78 @@
 
     <main>
       <section class="banner">
-        <!--  <h2>Help dogs</h2>
-                <h1>for helping dogs</h1>-->
+        <a href="#" class="scroll-down" address="true"></a>
       </section>
-      <!-- <div class="adopt">
-            <button class="myButton ">Adopt</button>
-            </div>-->
+
       <section class="boxes">
         <div class="box1">
           <img class="section_images" src="images/tantoun.jpeg" />
-          <h4>Hello</h4>
+          <h3>Tina Mechleb Gets Her First Dog</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-            non, cum accusantium quisquam facilis, tempore culpa maiores
-            inventore, quidem quae optio sunt possimus corrupti quibusdam
-            numquam? Amet error dolores beatae?
+            Thinking of adopting a pet? <strong>DOGGO</strong> has many loving,
+            beautiful dogs that are waiting for you. Our facilities count around
+            500 dogs. Most of these pets have had a bad past, and they are
+            waiting for a second chance at life. All our animals are followed by
+            vets: they are vaccinated, de-wormed and spayed/neutered. Whether
+            you want an energetic puppy who loves to run around and play, a
+            senior dog who wants to snuggle and sleep by your side, we can help
+            you contact us.
           </p>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="footer">
+        <div class="contain">
+          <div class="col">
+            <h1>DOGGO</h1>
+            <ul>
+              <li>About</li>
+              <li>Careers</li>
+              <li>Social</li>
+              <li>Get in touch</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h1>Support</h1>
+            <ul>
+              <li>Contact us</li>
+              <li>Web chat</li>
+              <li>Open ticket</li>
+            </ul>
+          </div>
+          <div class="col social">
+            <h1>Social</h1>
+            <ul>
+              <li>
+                <img
+                  src="https://svgshare.com/i/5fq.svg"
+                  width="32"
+                  style="width: 32px;"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://svgshare.com/i/5eA.svg"
+                  width="32"
+                  style="width: 32px;"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://svgshare.com/i/5f_.svg"
+                  width="32"
+                  style="width: 32px;"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

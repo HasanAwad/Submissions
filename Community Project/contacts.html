@@ -1,6 +1,11 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="contact-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Concert+One&display=swap"
+      rel="stylesheet"
+    />
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
@@ -11,47 +16,32 @@
         <a class="brand_title" href="index.html"><Datag>DOGGO</Datag></a>
         <div>
           <ul>
-            <li><a class="active" href="#home">Home</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="#news_events">News and Events</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contacts.html">Contact</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
     <main>
-      <div class="contact-form">
-        <fieldset>
-          <legend>Please enter information accurately</legend>
-          <p class="note">Fields containing <span>*</span> are required</p>
-          <div class="grids">
-            <label class="bold-lable" for="name"
-              >Your Name <span>*</span></label
-            >
-            <input type="text" id="name" required /> <br />
-
-            <label class="bold-lable" for="email"
-              >Your Email <span>*</span></label
-            >
-            <input type="email" id="email" required /> <br />
-
-            <label class="bold-lable" for="location"
-              >Location <span>*</span></label
-            >
-            <input type="text" id="location" required /> <br />
+      <section>
+        <form class="form">
+          <h2>CONTACT US</h2>
+          <p type="Name:"><input placeholder="Write your name here.." /></p>
+          <p type="Email:">
+            <input placeholder="Let us know how to contact you back.." />
+          </p>
+          <p type="Message:">
+            <input placeholder="What would you like to tell us.." />
+          </p>
+          <button>Send Message</button>
+          <div>
+            <span class="fa fa-phone"></span>+96176941170
+            <span class="fa fa-envelope-o"></span> contact@doggo.com
           </div>
-
-          <label class="bold-lable" for="more-info">More Information</label>
-          <br />
-          <textarea
-            type="text"
-            id="more-info"
-            placeholder="add more info"
-          ></textarea>
-          <br />
-        </fieldset>
-        <button type="submit" id="sub-button">Adopt</button>
-      </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
